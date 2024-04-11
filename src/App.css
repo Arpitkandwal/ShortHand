@@ -258,7 +258,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px){
 
     .image-container{
       justify-content: center;
@@ -288,28 +288,143 @@
 
     .map-div iframe{
       position: relative;
-      /* margin: 50px; */
-      right: 6rem;
+      margin-left: 40px;
+      margin-bottom: 50px;
+      margin-right: 10px;
+      /* right: 6rem; */
     }
 
     .contact {
-      position: relative;
-      left: 7rem;
+      /* position: relative; */
+      /* right: 10.5rem; */
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+      margin-right: 80px;
     }
 
   .typed-heading {
     font-size: 32px;
-    top: 30%;
+    top: 23%;
   }
 
   .navbar-brand {
-    right: 5rem;
+    right: 0rem;
   
   }
 
-  .contact-container {
-    margin-left: 50px;
+
+  .nav__hamburger {
+    display: flex;
+    z-index: 200;
   }
+
+  .navbar--items {
+    display: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #212529;
+    top: -20rem;
+    left: 0;
+    width: 100%;
+    transition: all ease-in-out 0.4s;
+  }
+
+  .navbar--items ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0 0.6rem;
+    z-index: -100;
+  }
+
+  .navbar--items ul li {
+    text-align: center;
+  }
+
+  .navbar--items ul li a {
+    padding: 0.5rem;
+  }
+
+  .navbar--items {
+    z-index: -1000;
+  }
+
+  .navbar--items.active {
+    display: flex;
+    top: 30px;
+  }
+
+  .nav__hamburger.active :nth-child(1) {
+    transform: rotate(45deg) translate(0.45rem, 0.1875rem);
+  }
+
+  .nav__hamburger.active :nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__hamburger.active :nth-child(3) {
+    transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
+  }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+
+    .image-container{
+      justify-content: center;
+      margin-right: 30px;
+    }
+
+    .about-us-us h2 {
+      text-align: center;
+    } 
+    .about-us-us p {
+      margin: 20px;
+      margin-bottom: 0;
+    }
+
+    .gallery {
+      width: 80%;
+      margin-right: 60px;
+    }
+
+    .zoom-effect {
+      transition: transform 0.3s ease-in;
+    }
+  
+    .zoom-effect:hover {
+      transform: scale(1.1);
+    }
+
+    .map-div iframe{
+      position: relative;
+      width: 700px;
+      margin-left: 40px;
+      margin-bottom: 50px;
+      margin-right: 10px;
+      /* right: 6rem; */
+    }
+
+    .contact {
+      position: relative;
+      /* right: 10.5rem; */
+      margin-left: 180px;
+      /* margin-right: 10px; */
+    }
+
+  .typed-heading {
+    font-size: 32px;
+    top: 23%;
+  }
+
+  .navbar-brand {
+    right: 0rem;
+  
+  }
+
 
   .nav__hamburger {
     display: flex;
